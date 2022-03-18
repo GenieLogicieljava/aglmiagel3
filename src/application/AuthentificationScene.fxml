@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #bd5615;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="36.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DE RESTAURANT">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ImageView blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/icons/images.png5.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="371.0" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" styleClass="user" BorderPane.alignment="CENTER">
+         <children>
+            <PasswordField layoutX="101.0" layoutY="250.0" promptText="Mot de passe" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button layoutX="128.0" layoutY="313.0" mnemonicParsing="false" style="-fx-background-color: #bd5615;" text="connexion" textFill="#0a0907" />
+            <Hyperlink layoutX="28.0" layoutY="452.0" text="Avez-vous oublié votre mot de passe?" textFill="#2f0b06" />
+            <TextField layoutX="101.0" layoutY="202.0" promptText="NOM" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Text fill="#110e0e" layoutX="114.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AUTHENTIFICATION">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ImageView blendMode="MULTIPLY" fitHeight="89.0" fitWidth="95.0" layoutX="146.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/icons/téléchargement.png%20AD.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="37.0" layoutX="53.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/icons/téléchargement.png%20KEY.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="MULTIPLY" fitHeight="40.0" fitWidth="42.0" layoutX="52.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/icons/uer.png" />
+               </image>
+            </ImageView>
+            <ImageView blendMode="HARD_LIGHT" fitHeight="25.0" fitWidth="37.0" layoutX="312.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" style="visibility: transparent; visibility: ;">
+               <image>
+                  <Image url="@../../assets/icons/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
