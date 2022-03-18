@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1172.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <SplitPane prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button layoutX="44.0" layoutY="42.0" mnemonicParsing="false" text="Button" />
+                  <Button layoutX="53.0" layoutY="367.0" mnemonicParsing="false" text="Button" />
+                  <ComboBox layoutX="15.0" layoutY="152.0" prefWidth="150.0" />
+                  <ComboBox layoutX="24.0" layoutY="268.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </left>
+   <right>
+      <SplitPane prefHeight="527.0" prefWidth="162.0" BorderPane.alignment="CENTER">
+         <items>
+            <SplitPane prefHeight="160.0" prefWidth="200.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="506.0" prefWidth="160.0">
+                     <children>
+                        <ScrollBar layoutX="136.0" layoutY="122.0" orientation="VERTICAL" prefHeight="141.0" prefWidth="20.0" />
+                        <HBox layoutX="1.0" layoutY="471.0" prefHeight="54.0" prefWidth="158.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="Button" />
+                              <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" text="Button" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </right>
+   <top>
+      <Pane prefHeight="78.0" prefWidth="1112.0" BorderPane.alignment="CENTER">
+         <children>
+            <DatePicker layoutX="27.0" layoutY="14.0" />
+            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="871.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images.png5.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="527.0" prefWidth="541.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollBar layoutX="762.0" layoutY="1.0" orientation="VERTICAL" prefHeight="860.0" prefWidth="20.0" />
+            <TextField layoutX="21.0" layoutY="21.0" prefHeight="147.0" prefWidth="238.0" />
+            <TextField layoutX="282.0" layoutY="21.0" prefHeight="147.0" prefWidth="230.0" />
+            <TextField layoutX="20.0" layoutY="204.0" prefHeight="147.0" prefWidth="249.0" />
+            <TextField layoutX="16.0" layoutY="366.0" prefHeight="147.0" prefWidth="255.0" />
+            <TextField layoutX="288.0" layoutY="197.0" prefHeight="147.0" prefWidth="224.0" />
+            <TextField layoutX="287.0" layoutY="366.0" prefHeight="147.0" prefWidth="225.0" />
+            <ImageView fitHeight="125.0" fitWidth="137.0" layoutX="122.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@56369_w800h600c1cx256cy192.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="280.0" layoutY="130.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="21.0" layoutY="313.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="288.0" layoutY="306.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="14.0" layoutY="475.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="288.0" layoutY="475.0" mnemonicParsing="false" text="Button" />
+            <ImageView fitHeight="113.0" fitWidth="137.0" layoutX="375.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@poisson-frit-alloco-piment-banane-ivorianfood.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="154.0" layoutX="114.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@49ebc5685489b422eb165edfebca8a10.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="95.0" layoutX="432.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Babisearch-porc-au-four1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="155.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@FB_IMG_1606771875634-2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="130.0" fitWidth="133.0" layoutX="379.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@129340660_146374907274335_3374892940906900406_n.jpg" />
+               </image>
+            </ImageView>
+            <TextArea layoutX="14.0" layoutY="556.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea layoutX="300.0" layoutY="556.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea layoutX="556.0" layoutY="201.0" prefHeight="153.0" prefWidth="200.0" />
+            <TextArea layoutX="550.0" layoutY="375.0" prefHeight="153.0" prefWidth="200.0" />
+            <TextArea layoutX="562.0" layoutY="556.0" prefHeight="201.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
