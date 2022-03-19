@@ -1,18 +1,19 @@
 package com.restaurant.dao;
 
+import java.util.List;
+
 import com.groupe9.model.ComandePlats;
 
+
 public interface IComandePlats {
-	void saveComandePlats(ComandePlats comandePlats);
+	com.restaurant.dao.ComandePlats getComandePlatsById(int id);
 
-	 void ComandePlats(ComandePlats comandePlats);
-
-	 ComandePlats getComandePlatsById(int id);
+	 List<ComandePlats> getAllComandePlats();
 
 	 void deleteComandePlats(int id);
 
-	void updateComandePlats(com.groupe9.model.ComandePlats comandePlats);
+	void updateComandePlats(com.restaurant.dao.ComandePlats comandePlats);
 
-	List<com.groupe9.model.ComandePlats> getAllComandePlats();
+	void saveComandePlats(com.restaurant.dao.ComandePlats comandePlats);
 
 }

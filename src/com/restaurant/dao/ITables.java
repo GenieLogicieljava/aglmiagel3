@@ -1,18 +1,18 @@
 package com.restaurant.dao;
 
+import java.util.List;
+
 import com.groupe9.model.Tables;
 
 public interface ITables {
-	void saveTables(Tables tables);
+	com.restaurant.dao.Tables getTablesById(int id);
 
-	 void Tables(Tables tables);
-
-	 Tables getTablesById(int id);
+	 List<Tables> getAllTables();
 
 	 void deleteTables(int id);
 
-	void updateTables(com.groupe9.model.Tables tables);
+	void updateTables(com.restaurant.dao.Tables tables);
 
-	List<com.groupe9.model.Tables> getAllTables();
+	void saveTables(com.restaurant.dao.Tables tables);
 
 }

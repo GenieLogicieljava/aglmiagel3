@@ -4,18 +4,17 @@ import java.util.List;
 
 import com.groupe9.model.Livreurs;
 
+
 public interface ILivreurs {
 
- void saveLivreurs(Livreurs livreur);
+	com.restaurant.dao.Livreurs getLivreursById(int id);
 
- void Livreurs(Livreurs livreur);
+	 List<Livreurs> getAllLivreurs();
 
- Livreurs getLivreursById(int id);
+	 void deleteLivreurs(int id);
 
- void deleteLivreurs(int id);
+	void updateLivreurs(com.restaurant.dao.Livreurs livreurs);
 
-void updateLivreurs(com.groupe9.model.Livreurs livreurs);
-
-List<com.groupe9.model.Livreurs> getAllLivreurs();
+	void saveLivreurs(com.restaurant.dao.Livreurs livreurs);
 
 }

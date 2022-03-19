@@ -1,6 +1,10 @@
 package com.restaurant.dao;
 
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import com.groupe9.util.HibernateUtil;
+
 
 public class ComandePlats implements IComandePlats{
 	// save ComandePlats
@@ -66,7 +70,7 @@ public class ComandePlats implements IComandePlats{
 			    transaction = session.beginTransaction();
 
 			    // get student object
-			    comandePlats= session.byId(Boissons.class).getReference(id);
+			    comandePlats= session.byId(ComandePlats.class).getReference(id);
 			     // or student = session.get(Student.class, id);
 			    //or student = session.load(Student.class, id);
 			   //or commit the transaction
@@ -87,9 +91,9 @@ public class ComandePlats implements IComandePlats{
      */
     @Override
     @SuppressWarnings("unchecked")
-    public List < ComandePlats > getAllComandePlats() {
+    public List<com.groupe9.model.ComandePlats> getAllComandePlats() {
         Transaction transaction = null;
-        List < ComandePlats > comandePlats = null;
+        List<com.groupe9.model.ComandePlats> comandePlats = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();
@@ -113,7 +117,7 @@ public class ComandePlats implements IComandePlats{
     @Override
     public void deleteComandePlats(int id) {
         Transaction transaction = null;
-        ClientsExternes comandePlats = null;
+       ComandePlats comandePlats = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();

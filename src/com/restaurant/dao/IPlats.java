@@ -1,18 +1,18 @@
 package com.restaurant.dao;
 
+import java.util.List;
+
 import com.groupe9.model.Plats;
 
 public interface IPlats {
-	void savePlats(Plats plats);
+	com.restaurant.dao.Plats getPlatsById(int id);
 
-	 void Plats(Plats plats);
-
-	 Plats getPlatsById(int id);
+	 List<Plats> getAllPlats();
 
 	 void deletePlats(int id);
 
-	void updatePlats(com.groupe9.model.Plats plats);
+	void updatePlats(com.restaurant.dao.Plats plats);
 
-	List<com.groupe9.model.Plats> getAllPlats();
+	void savePlats(com.restaurant.dao.Plats plats);
 
 }

@@ -1,18 +1,23 @@
 package com.restaurant.dao;
 
+import java.util.List;
+
 import com.groupe9.model.Boissons;
 
+
 public interface IBoissons {
-	void saveBoissons(Boissons boissons);
+	
+	
 
-	 void Boissons(Boissons boissons);
-
-	 Boissons getBoissonsById(int id);
+	 List<Boissons> getAllBoissons();
 
 	 void deleteBoissons(int id);
 
-	void updateBoissons(com.groupe9.model.Boissons boissons);
+	void updateBoissons(com.restaurant.dao.Boissons boissons);
 
-	List<com.groupe9.model.Boissons> getAllBoissons();
+	void saveBoisson(com.restaurant.dao.Boissons boissons);
 
+	com.restaurant.dao.Boissons getBoissonById(int id);
+
+	
 }

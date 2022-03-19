@@ -1,18 +1,19 @@
 package com.restaurant.dao;
 
+import java.util.List;
+
 import com.groupe9.model.ClientExternes;
 
 public interface IClientExternes {
-	void saveClientExternes(ClientExternes clientExternes);
 
-	 void ClientExternes(ClientExternes clientExternes);
+	 com.restaurant.dao.ClientExternes getClientExternesById(int id);
 
-	 ClientExternes getClientExternesById(int id);
+	 List<ClientExternes> getAllClientExternes();
 
 	 void deleteClientExternes(int id);
 
-	void updateClientExternes(com.groupe9.model.ClientExternes clientExternes);
+	void updateClientExternes(com.restaurant.dao.ClientExternes clientExternes);
 
-	List<com.groupe9.model.ClientExternes> getAllClientExternes();
+	void saveClientExternes(com.restaurant.dao.ClientExternes clientExternes);
 
 }

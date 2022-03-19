@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import com.groupe9.model.Livreurs;
 import com.groupe9.util.HibernateUtil;
 
 public class Livreurs implements ILivreurs {
@@ -93,15 +92,15 @@ public class Livreurs implements ILivreurs {
      */
     @Override
     @SuppressWarnings("unchecked")
-    public List < Livreurs > getAllLivreurs() {
+    public List<com.groupe9.model.Livreurs> getAllLivreurs() {
         Transaction transaction = null;
-        List < Livreurs > livreurss = null;
+        List<com.groupe9.model.Livreurs> livreurs = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();
 
-            // get livreurss
-            livreurss = session.createQuery("from Livreurs").list();
+            // get livreurs
+            livreurs = session.createQuery("from Livreurs").list();
             //livreurs = session.load(Livreurs.class, id);
             // commit the transaction
             transaction.commit();
@@ -110,7 +109,7 @@ public class Livreurs implements ILivreurs {
                 transaction.rollback();
             }
         }
-        return livreurss;
+        return livreurs;
     }
 
     /* (non-Javadoc)
@@ -137,9 +136,5 @@ public class Livreurs implements ILivreurs {
         }
     }
 
-	@Override
-	public void Livreurs(com.groupe9.model.Livreurs livreur) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

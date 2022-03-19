@@ -1,6 +1,10 @@
 package com.restaurant.dao;
 
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import com.groupe9.util.HibernateUtil;
+
 
 public class Menus implements IMenus {
 	// save Menus
@@ -66,7 +70,7 @@ public class Menus implements IMenus {
 			    transaction = session.beginTransaction();
 
 			    // get student object
-			    menus= session.byId(Boissons.class).getReference(id);
+			    menus= session.byId(Menus.class).getReference(id);
 			     // or student = session.get(Student.class, id);
 			    //or student = session.load(Student.class, id);
 			   //or commit the transaction
@@ -113,7 +117,7 @@ public class Menus implements IMenus {
     @Override
     public void deleteMenus(int id) {
         Transaction transaction = null;
-        ClientsExternes menus = null;
+        Menus menus = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();

@@ -1,16 +1,21 @@
 package com.restaurant.dao;
 
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import com.groupe9.util.HibernateUtil;
 
 public class ClientExternes implements IClientExternes {
-	 // save ClientExternes
-    // get All ClientExternes
+	// save ClientExternes
+    // get All ClientExterness
     // get ClientExternes By Id
     // Update ClientExternes
     // Delete ClientExternes
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#saveStudent(net.javaguides.hibernate.model.Student)
+     * @see net.javaguides.hibernate.dao.IClientExternesDao#saveClientExternes(net.javaguides.hibernate.model.ClientExternes)
      */
     @Override
     public void saveClientExternes(ClientExternes clientExternes) {
@@ -19,7 +24,7 @@ public class ClientExternes implements IClientExternes {
             // start the transaction
             transaction = session.beginTransaction();
 
-            // save student object
+            // save clientExterness object
             session.save(clientExternes);
 
             // commit the transaction
@@ -32,7 +37,7 @@ public class ClientExternes implements IClientExternes {
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#updateStudent(net.javaguides.hibernate.model.Student)
+     * @see net.javaguides.hibernate.dao.IClientExternesDao#updateClientExternes(net.javaguides.hibernate.model.ClientExternes)
      */
     @Override
     public void updateClientExternes(ClientExternes clientExternes) {
@@ -41,7 +46,7 @@ public class ClientExternes implements IClientExternes {
             // start the transaction
             transaction = session.beginTransaction();
 
-            // save student object
+            // save clientExterness object
             session.saveOrUpdate(clientExternes);
 
             // commit the transaction
@@ -54,7 +59,7 @@ public class ClientExternes implements IClientExternes {
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#getStudentById(long)
+     * @see net.javaguides.hibernate.dao.IClientExternesDao#getClientExternesById(long)
      */
     @Override
     public ClientExternes getClientExternesById(int id) {
@@ -65,10 +70,10 @@ public class ClientExternes implements IClientExternes {
 			    // start the transaction
 			    transaction = session.beginTransaction();
 
-			    // get student object
-			    clientExternes= session.byId(Boissons.class).getReference(id);
-			     // or student = session.get(Student.class, id);
-			    //or student = session.load(Student.class, id);
+			    // get clientExterness object
+			    clientExternes= session.byId(ClientExternes.class).getReference(id);
+			     // or clientExterness = session.get(ClientExternes.class, id);
+			    //or clientExterness = session.load(ClientExternes.class, id);
 			   //or commit the transaction
 			    transaction.commit();
 		} catch (Exception e) {
@@ -83,20 +88,20 @@ public class ClientExternes implements IClientExternes {
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#getAllStudents()
+     * @see net.javaguides.hibernate.dao.IClientExternesDao#getAllClientExterness()
      */
     @Override
     @SuppressWarnings("unchecked")
-    public List < ClientExternes > getAllClientExternes() {
+    public List<com.groupe9.model.ClientExternes> getAllClientExternes() {
         Transaction transaction = null;
-        List < ClientExternes > clientExternes = null;
+        List<com.groupe9.model.ClientExternes> clientExternes = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();
 
-            // get students
+            // get clientExternes
             clientExternes = session.createQuery("from ClientExternes").list();
-            //student = session.load(Student.class, id);
+            //clientExternes = session.load(ClientExternes.class, id);
             // commit the transaction
             transaction.commit();
         } catch (Exception e) {
@@ -108,20 +113,20 @@ public class ClientExternes implements IClientExternes {
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#deleteStudent(long)
+     * @see net.javaguides.hibernate.dao.IClientExternesDao#deleteClientExternes(long)
      */
     @Override
     public void deleteClientExternes(int id) {
         Transaction transaction = null;
-        ClientsExternes clientExternes = null;
+        ClientExternes clientExternes = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();
 
             clientExternes = session.get(ClientExternes.class, id);
-            // get student object
+            // get clientExternes object
             session.delete(clientExternes);
-            //student = session.load(Student.class, id);
+            //clientExternes = session.load(ClientExternes.class, id);
             // commit the transaction
             transaction.commit();
         } catch (Exception e) {
@@ -129,6 +134,6 @@ public class ClientExternes implements IClientExternes {
                 transaction.rollback();
             }
         }
-    }	
-
+    }
+	
 }

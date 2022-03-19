@@ -1,18 +1,19 @@
 package com.restaurant.dao;
 
+import java.util.List;
+
 import com.groupe9.model.ComandeBoissons;
 
+
 public interface IComandeBoissons {
-	void saveComandeBoissons(ComandeBoissons comandeBoissons);
+	com.restaurant.dao.ComandeBoissons getComandeBoissonsById(int id);
 
-	 void ComandeBoissons(ComandeBoissons comandeBoissons);
-
-	 ComandeBoissons getComandeBoissonsById(int id);
+	 List<ComandeBoissons> getAllComandeBoissons();
 
 	 void deleteComandeBoissons(int id);
 
-	void updateComandeBoissons(com.groupe9.model.ComandeBoissons comandeBoissons);
+	void updateComandeBoissons(com.restaurant.dao.ComandeBoissons comandeBoissons);
 
-	List<com.groupe9.model.ComandeBoissons> getAllComandeBoissons();
+	void saveComandeBoissons(com.restaurant.dao.ComandeBoissons comandeBoissons);
 
 }

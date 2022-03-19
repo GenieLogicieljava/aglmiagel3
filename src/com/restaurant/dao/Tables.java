@@ -1,16 +1,19 @@
 package com.restaurant.dao;
 
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import com.groupe9.util.HibernateUtil;
 
 public class Tables implements ITables{
 	// save Tables
-    // get All Tables
+    // get All Tabless
     // get Tables By Id
     // Update Tables
     // Delete Tables
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#saveStudent(net.javaguides.hibernate.model.Student)
+     * @see net.javaguides.hibernate.dao.ITablesDao#saveTables(net.javaguides.hibernate.model.Tables)
      */
     @Override
     public void saveTables(Tables tables) {
@@ -19,7 +22,7 @@ public class Tables implements ITables{
             // start the transaction
             transaction = session.beginTransaction();
 
-            // save student object
+            // save tabless object
             session.save(tables);
 
             // commit the transaction
@@ -32,7 +35,7 @@ public class Tables implements ITables{
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#updateStudent(net.javaguides.hibernate.model.Student)
+     * @see net.javaguides.hibernate.dao.ITablesDao#updateTables(net.javaguides.hibernate.model.Tables)
      */
     @Override
     public void updateTables(Tables tables) {
@@ -41,7 +44,7 @@ public class Tables implements ITables{
             // start the transaction
             transaction = session.beginTransaction();
 
-            // save student object
+            // save tabless object
             session.saveOrUpdate(tables);
 
             // commit the transaction
@@ -54,7 +57,7 @@ public class Tables implements ITables{
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#getStudentById(long)
+     * @see net.javaguides.hibernate.dao.ITablesDao#getTablesById(long)
      */
     @Override
     public Tables getTablesById(int id) {
@@ -65,10 +68,10 @@ public class Tables implements ITables{
 			    // start the transaction
 			    transaction = session.beginTransaction();
 
-			    // get student object
-			    tables= session.byId(Boissons.class).getReference(id);
-			     // or student = session.get(Student.class, id);
-			    //or student = session.load(Student.class, id);
+			    // get tabless object
+			    tables= session.byId(Tables.class).getReference(id);
+			     // or tabless = session.get(Tables.class, id);
+			    //or tabless = session.load(Tables.class, id);
 			   //or commit the transaction
 			    transaction.commit();
 		} catch (Exception e) {
@@ -83,20 +86,20 @@ public class Tables implements ITables{
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#getAllStudents()
+     * @see net.javaguides.hibernate.dao.ITablesDao#getAllTabless()
      */
     @Override
     @SuppressWarnings("unchecked")
-    public List < Tables > getAllTables() {
+    public List<com.groupe9.model.Tables> getAllTables() {
         Transaction transaction = null;
-        List < Tables > tables = null;
+        List<com.groupe9.model.Tables> tables = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();
 
-            // get students
+            // get tables
             tables = session.createQuery("from Tables").list();
-            //student = session.load(Student.class, id);
+            //tables = session.load(Tables.class, id);
             // commit the transaction
             transaction.commit();
         } catch (Exception e) {
@@ -108,20 +111,20 @@ public class Tables implements ITables{
     }
 
     /* (non-Javadoc)
-     * @see net.javaguides.hibernate.dao.IStudentDao#deleteStudent(long)
+     * @see net.javaguides.hibernate.dao.ITablesDao#deleteTables(long)
      */
     @Override
     public void deleteTables(int id) {
         Transaction transaction = null;
-        ClientsExternes tables = null;
+        Tables tables = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();
 
             tables = session.get(Tables.class, id);
-            // get student object
+            // get tables object
             session.delete(tables);
-            //student = session.load(Student.class, id);
+            //tables = session.load(Tables.class, id);
             // commit the transaction
             transaction.commit();
         } catch (Exception e) {
@@ -129,6 +132,5 @@ public class Tables implements ITables{
                 transaction.rollback();
             }
         }
-    }	
-
+    }
 }

@@ -3,7 +3,6 @@ package com.restaurant.dao;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import com.groupe9.model.Boissons;
 import com.groupe9.util.HibernateUtil;
 
 public class Boissons implements IBoissons{
@@ -91,9 +90,9 @@ public class Boissons implements IBoissons{
      */
     @Override
     @SuppressWarnings("unchecked")
-    public List < Boissons > getAllBoissons() {
+    public List<com.groupe9.model.Boissons> getAllBoissons() {
         Transaction transaction = null;
-        List < Boissons > boissons = null;
+        List<com.groupe9.model.Boissons> boissons = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             // start the transaction
             transaction = session.beginTransaction();
@@ -124,7 +123,7 @@ public class Boissons implements IBoissons{
 
             boissons = session.get(Boissons.class, id);
             // get student object
-            session.delete(student);
+            session.delete(boissons);
             //student = session.load(Student.class, id);
             // commit the transaction
             transaction.commit();
@@ -133,6 +132,8 @@ public class Boissons implements IBoissons{
                 transaction.rollback();
             }
         }
-    }	
+    }
+
+	
 
 }
