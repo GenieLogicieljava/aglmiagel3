@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerParametreTable">
+   <children>
+      <Pane layoutY="7.0" prefHeight="410.0" prefWidth="610.0">
+         <children>
+            <Label layoutX="93.0" layoutY="32.0" prefHeight="40.0" prefWidth="449.0" text="Enregistrement Table " textAlignment="CENTER">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="36.0" />
+               </font>
+            </Label>
+            <Button alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="411.0" layoutY="250.0" minWidth="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" text="Modifier" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="92.0" layoutY="177.0" prefHeight="25.0" prefWidth="150.0" text="Nombre de place">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Button alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="167.0" layoutY="250.0" minWidth="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" text="Valider" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField layoutX="265.0" layoutY="170.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
