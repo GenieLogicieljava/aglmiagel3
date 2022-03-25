@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/my_library"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/my library"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/antlr-2.7.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/asm-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/byte-buddy-1.8.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/classmate-1.5.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/commons-email-1.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/controlsfx-8.0.6_20.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/controlsfx-8.40.14.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/dom4j-2.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/hibernate-commons-annotations-5.0.4.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/hibernate-core-5.3.7.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/hibernate-jpamodelgen-5.3.7.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/hibernate-validator-5.3.6.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jandex-2.0.5.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/javassist-3.23.1-GA.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/javax.activation-api-1.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/javax.persistence-api-2.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jaxb-api-2.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jaxb-core-3.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jaxb-impl-3.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jboss-logging-3.3.2.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jboss-transaction-api_1.2_spec-1.1.1.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jfoenix-8.0.8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jfoenix-9.0.8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/jta-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/mail-1.4.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/mysql-connector-java-5.1.49-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PACHA/eclipse-workspace/HibernateCrud/libs/poi-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/byte-buddy-1.8.17.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/classmate-1.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/commons-email-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/controlsfx-8.0.6_20.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/controlsfx-8.40.14.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/dom4j-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/hibernate-commons-annotations-5.0.4.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/hibernate-core-5.3.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/hibernate-jpamodelgen-5.3.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/hibernate-validator-5.3.6.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jandex-2.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/javassist-3.23.1-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jaxb-core-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jaxb-impl-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jboss-logging-3.3.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jboss-transaction-api_1.2_spec-1.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jfoenix-8.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jfoenix-9.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/mail-1.4.7.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/mysql-connector-java-5.1.49-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/poi-4.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
