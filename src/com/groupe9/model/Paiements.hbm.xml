@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 mars 2022, 23:30:20 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.groupe9.model.Paiements" table="paiements" catalog="restaurant" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="montant" type="int">
+            <column name="montant" not-null="true" />
+        </property>
+        <property name="modePaiement" type="int">
+            <column name="mode_paiement" not-null="true" />
+        </property>
+        <property name="etat" type="boolean">
+            <column name="etat" not-null="true" />
+        </property>
+        <property name="datePaiement" type="timestamp">
+            <column name="date_paiement" length="19" />
+        </property>
+        <set name="commandeses" table="commandes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="paiement_id" />
+            </key>
+            <one-to-many class="com.groupe9.model.Commandes" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -34,7 +34,7 @@
                   <Insets left="20.0" />
                </padding>
             </Label>
-            <Button alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="409.0" layoutY="297.0" minWidth="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" text="Supprimer" underline="true">
+            <Button alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="179.0" layoutY="297.0" minWidth="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" text="Retour" textFill="WHITE" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -55,20 +55,15 @@
                   <Insets left="20.0" />
                </padding>
             </Label>
-            <TextField layoutX="269.0" layoutY="126.0" />
-            <TextField layoutX="268.0" layoutY="196.0" />
-            <TextField layoutX="269.0" layoutY="163.0">
+            <TextField fx:id="setCni" layoutX="269.0" layoutY="126.0" />
+            <TextField fx:id="setNom" layoutX="269.0" layoutY="163.0">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </TextField>
-            <TextField layoutX="269.0" layoutY="233.0" />
-            <Button alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="298.0" layoutY="297.0" minWidth="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" text="Creer" underline="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="193.0" layoutY="297.0" minWidth="42.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" text="Modifier" underline="true">
+            <TextField fx:id="setAdresse" layoutX="268.0" layoutY="196.0" />
+            <TextField fx:id="setContact" layoutX="269.0" layoutY="233.0" />
+            <Button alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="305.0" layoutY="297.0" minWidth="42.0" mnemonicParsing="false" onAction="#saveLivreurs" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: green;" text="Creer" textFill="WHITE" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

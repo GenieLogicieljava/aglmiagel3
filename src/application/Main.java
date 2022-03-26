@@ -14,7 +14,7 @@ public class Main extends Application {
 		
 		try {
 			
-			Parent root = FXMLLoader.load(getClass().getResource("Authentification.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("ParametreLivreur.fxml"));
 			
 			primaryStage.setTitle("Logiciel De Gestion Restaurant~chap.chap by groupe 9 ");
 			primaryStage.setScene(new Scene (root));

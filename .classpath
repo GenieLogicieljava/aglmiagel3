@@ -16,7 +16,7 @@
 	<classpathentry kind="lib" path="C:/Java/jar/controlsfx-8.40.14.jar"/>
 	<classpathentry kind="lib" path="C:/Java/jar/dom4j-2.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Java/jar/hibernate-commons-annotations-5.0.4.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Java/jar/hibernate-core-5.3.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jar/hibernate-core-5.3.7.Final.jar" sourcepath="C:/Users/miana/.m2/repository/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Java/jar/hibernate-jpamodelgen-5.3.7.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Java/jar/hibernate-validator-5.3.6.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Java/jar/jandex-2.0.5.Final.jar"/>

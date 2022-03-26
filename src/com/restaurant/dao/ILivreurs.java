@@ -9,12 +9,12 @@ public interface ILivreurs {
 
 	com.restaurant.dao.Livreurs getLivreursById(int id);
 
-	 List<Livreurs> getAllLivreurs();
+	List<Livreurs> getAllLivreurs();
 
-	 void deleteLivreurs(int id);
+	void deleteLivreurs(int id);
 
 	void updateLivreurs(com.restaurant.dao.Livreurs livreurs);
 
-	void saveLivreurs(com.restaurant.dao.Livreurs livreurs);
+	public void saveLivreurs(com.restaurant.dao.Livreurs livreurs);
 
 }

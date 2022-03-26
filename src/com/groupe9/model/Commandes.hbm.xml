@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 mars 2022, 23:30:20 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.groupe9.model.Commandes" table="commandes" catalog="restaurant" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="clientExternes" class="com.groupe9.model.ClientExternes" fetch="select">
+            <column name="client_externe_id" />
+        </many-to-one>
+        <many-to-one name="livreurs" class="com.groupe9.model.Livreurs" fetch="select">
+            <column name="livreur_id" />
+        </many-to-one>
+        <many-to-one name="paiements" class="com.groupe9.model.Paiements" fetch="select">
+            <column name="paiement_id" />
+        </many-to-one>
+        <many-to-one name="tables" class="com.groupe9.model.Tables" fetch="select">
+            <column name="table_id" />
+        </many-to-one>
+        <property name="typeClient" type="boolean">
+            <column name="type_client" not-null="true" />
+        </property>
+        <property name="dateCommande" type="timestamp">
+            <column name="date_commande" length="19" not-null="true" />
+        </property>
+        <set name="comandeBoissonses" table="comande_boissons" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="commande_id" not-null="true" />
+            </key>
+            <one-to-many class="com.groupe9.model.ComandeBoissons" />
+        </set>
+        <set name="comandePlatses" table="comande_plats" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="commande_id" not-null="true" />
+            </key>
+            <one-to-many class="com.groupe9.model.ComandePlats" />
+        </set>
+    </class>
+</hibernate-mapping>
