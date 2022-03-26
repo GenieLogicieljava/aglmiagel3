@@ -8,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 public class Main extends Application {
-	//private static Scene scene;
 	@Override
 	public void start(Stage primaryStage) {
 		
@@ -19,9 +18,7 @@ public class Main extends Application {
 			primaryStage.setTitle("Logiciel De Gestion Restaurant~chap.chap by groupe 9 ");
 			primaryStage.setScene(new Scene (root));
 			
-			primaryStage.getIcons().add(
-					new Image(
-							Main.class.getResourceAsStream("Iconeexe.jpg")));
+			primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("Iconeexe.jpg")));
 			primaryStage.show();
 			
 		} catch(Exception e) {

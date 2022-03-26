@@ -44,7 +44,7 @@ public class ControllerAuthentification {
     		Stage stage = new Stage();
     		stage.setScene(new Scene (root));
     	    stage.show();*/
-    		Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
+    		Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
     	    Stage window = (Stage) authAdminID.getScene().getWindow();
     	    window.setScene(new Scene (root));
     	}else {
