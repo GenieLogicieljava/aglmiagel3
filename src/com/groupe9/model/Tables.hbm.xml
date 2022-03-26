@@ -1,25 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 25 mars 2022, 23:30:20 by Hibernate Tools 4.3.5.Final -->
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2022, 10:44:30 by Hibernate Tools 4.3.5.Final -->
 <hibernate-mapping>
- <class catalog="restaurant" name="com.groupe9.model.Tables" table="tables">
-  <id name="id" type="java.lang.Integer">
-   <column name="id"/>
-   <generator class="increment"/>
-  </id>
-  <property generated="never" lazy="false" name="numero" type="int">
-   <column name="numero" not-null="true" unique="true"/>
-  </property>
-  <property generated="never" lazy="false" name="etat" type="boolean">
-   <column name="etat" not-null="true"/>
-  </property>
-  <set fetch="select" inverse="true" lazy="true" name="commandeses"
-   sort="unsorted" table="commandes">
-   <key>
-    <column name="table_id"/>
-   </key>
-   <one-to-many class="com.groupe9.model.Commandes"/>
-  </set>
- </class>
+    <class name="com.groupe9.model.Tables" table="tables" catalog="restaurant" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="numero" type="int">
+            <column name="numero" not-null="true" unique="true" />
+        </property>
+        <property name="etat" type="boolean">
+            <column name="etat" not-null="true" />
+        </property>
+        <set name="commandeses" table="commandes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="table_id" />
+            </key>
+            <one-to-many class="com.groupe9.model.Commandes" />
+        </set>
+    </class>
 </hibernate-mapping>

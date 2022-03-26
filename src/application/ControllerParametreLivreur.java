@@ -39,7 +39,7 @@ public class ControllerParametreLivreur{
     @FXML
     void saveLivreurs(ActionEvent event) {
     	SessionFactory sessionFactory = com.groupe9.util.HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession(); 
+        Session session = sessionFactory.openSession();
         Transaction tx = null;
         
         try {

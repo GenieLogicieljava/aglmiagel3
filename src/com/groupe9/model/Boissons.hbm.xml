@@ -1,35 +1,33 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 25 mars 2022, 23:30:20 by Hibernate Tools 4.3.5.Final -->
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2022, 10:44:30 by Hibernate Tools 4.3.5.Final -->
 <hibernate-mapping>
- <class catalog="restaurant" name="com.groupe9.model.Boissons" table="boissons">
-  <id name="id" type="java.lang.Integer">
-   <column name="id"/>
-   <generator class="increment"/>
-  </id>
-  <property generated="never" lazy="false" name="nom" type="string">
-   <column length="50" name="nom" not-null="true"/>
-  </property>
-  <property generated="never" lazy="false" name="type" type="string">
-   <column length="50" name="type" not-null="true"/>
-  </property>
-  <property generated="never" lazy="false" name="image" type="binary">
-   <column name="image" not-null="true"/>
-  </property>
-  <set fetch="select" inverse="true" lazy="true" name="periodeses"
-   sort="unsorted" table="periodes">
-   <key>
-    <column name="boisson_id"/>
-   </key>
-   <one-to-many class="com.groupe9.model.Periodes"/>
-  </set>
-  <set fetch="select" inverse="true" lazy="true"
-   name="comandeBoissonses" sort="unsorted" table="comande_boissons">
-   <key>
-    <column name="boisson_id" not-null="true"/>
-   </key>
-   <one-to-many class="com.groupe9.model.ComandeBoissons"/>
-  </set>
- </class>
+    <class name="com.groupe9.model.Boissons" table="boissons" catalog="restaurant" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nom" type="string">
+            <column name="nom" length="50" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="50" not-null="true" />
+        </property>
+        <property name="image" type="binary">
+            <column name="image" not-null="true" />
+        </property>
+        <set name="periodeses" table="periodes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="boisson_id" />
+            </key>
+            <one-to-many class="com.groupe9.model.Periodes" />
+        </set>
+        <set name="comandeBoissonses" table="comande_boissons" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="boisson_id" not-null="true" />
+            </key>
+            <one-to-many class="com.groupe9.model.ComandeBoissons" />
+        </set>
+    </class>
 </hibernate-mapping>
